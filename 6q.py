@@ -9,7 +9,7 @@ class SqRoot:
     def __init__(self):
         self.C = 50
         self.H = 30
-        self.D = map(int, input("Enter valuesof D- ").split(","))
+        self.D = map(int, input("Enter valuesof D- ").split(","))  #new concept of map to take input from user in a comma-separated sequence
     def calc(self):
        for i in self.D:
             Q = math.sqrt((2 * self.C * i) / self.H)
