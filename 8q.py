@@ -1,7 +1,7 @@
 #accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
 #i/p - without,hello,bag,world   o/p - bag,hello,without,world
 
-str = input("Enter words: ").split(",")
+str = input("Enter words: ").split(",")  #new concept - take string type i/p in comma-separated sequence
 
 #without method - 
 
