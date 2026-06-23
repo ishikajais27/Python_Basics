@@ -716,3 +716,55 @@ words = s.split()         # "rise to vote sir" → ['rise', 'to', 'vote', 'sir']
 ## 42. String — Even Index Characters
 
 `s[::2]` — start from 0, take every 2nd character (step=2).
+
+---
+
+## 43. `itertools.permutations`
+
+A permutation = all possible orderings of elements.
+
+```python
+from itertools import permutations
+
+for p in permutations([1, 2, 3]):
+    print(p)
+```
+
+Each permutation is returned as a **tuple**. `[1,2,3]` has `3! = 6` permutations.
+
+---
+
+## 44. Brute Force — Chickens and Rabbits
+
+Brute force = try all possibilities and check which one satisfies all conditions.
+
+```python
+for r in range(heads + 1):    # try every possible rabbit count
+    c = heads - r              # remaining heads = chickens
+    if 4 * r + 2 * c == legs:
+        print("Rabbits:", r)
+        print("Chickens:", c)
+```
+
+---
+
+## 45. Core Concepts to Always Remember — Second Half
+
+| Concept                 | Key Point                                            |
+| ----------------------- | ---------------------------------------------------- |
+| Inheritance             | `class Child(Parent)` — gets all parent methods      |
+| `raise`                 | Manually trigger an error inside a condition         |
+| `try/except`            | Catch errors by type — prevents crash                |
+| Custom Exception        | `class MyError(Exception): pass`                     |
+| `re.match()`            | Match pattern from start of string                   |
+| `re.findall()`          | Find all matches — returns list                      |
+| `group(1)`              | First captured `()` group in regex                   |
+| `encode()` / `decode()` | String ↔ bytes conversion — always paired            |
+| `assert`                | Check condition — raises `AssertionError` if `False` |
+| `eval()`                | Run a string as Python code                          |
+| Binary Search           | O(log n) — requires sorted list                      |
+| `random.sample()`       | n unique random picks from a list                    |
+| `enumerate()`           | Adds index to iterable → `(i, value)` pairs          |
+| `set &=`                | Intersection — keep only shared elements             |
+| `seen` set pattern      | Remove duplicates while preserving order             |
+| `permutations`          | All orderings — from `itertools`                     |
